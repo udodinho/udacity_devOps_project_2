@@ -1,0 +1,10 @@
+[
+    {
+      "ParameterKey": "myAWSProjectName",
+      "ParameterValue": "HighAvailability-WebApp"
+    },
+    {
+      "ParameterKey": "BucketName",
+      "ParameterValue": "mynewawsbucket1999"
+    }
+  ]
