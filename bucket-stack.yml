@@ -1,0 +1,23 @@
+Description: Victor Anyimukwu  - S3 bucket for WebApp sourceCode.
+###################################
+Parameters:
+  myAWSProjectName:
+    Description: Will be prefixed to all resources names.
+    Type: String
+  BucketName:
+    Description: Name of the bucket to store web app source files.
+    Type: String
+###################################
+Resources:
+  WebAppBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+    DeletionPolicy: Delete
+###################################
+Outputs:
+  Bucket:
+    Value: !Ref WebAppBucket
+    Description: Bucket with sourcefiles
+    Export:
+      Name: !Sub ${myAWSProjectName}-BucketData
